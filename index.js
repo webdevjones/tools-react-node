@@ -1,7 +1,14 @@
 const express = require('express')
 const app = express()
+require('express-async-errors')
+const sectionRouter = require('./controllers/section')
+const customRouter = require('./controllers/custom')
+const cors = require('cors')
 
 const morgan = require('morgan')
+
+app.use(cors())
+app.use(express.json())
 app.use(morgan((tokens, req, res) => {
     return [
         tokens.method(req, res),
@@ -12,15 +19,21 @@ app.use(morgan((tokens, req, res) => {
         req.method === 'POST' ? JSON.stringify(req.body) : ''
     ].join(' ')
 }))
-app.use(cors())
+
+
+
 const unknownEndpoint = (request, response) => {
     response.status(404).send({ error: 'unknown endpoint' })
 }
 
+app.use('/api/section', sectionRouter)
+app.use('/api/custom', customRouter)
+
+
 app.use(unknownEndpoint)
 
 const errorHandler = (error, request, response, next) => {
-    console.error(error.message)    
+    console.error(error.message)
 
     next(error)
 }
