@@ -6,8 +6,8 @@ const customRouter = require('./controllers/custom')
 const cors = require('cors')
 
 const morgan = require('morgan')
+app.use(express.static('build'))
 
-app.use(cors())
 app.use(express.json())
 app.use(morgan((tokens, req, res) => {
     return [
@@ -19,6 +19,7 @@ app.use(morgan((tokens, req, res) => {
         req.method === 'POST' ? JSON.stringify(req.body) : ''
     ].join(' ')
 }))
+app.use(cors())
 
 
 

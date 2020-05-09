@@ -11,10 +11,8 @@ const NB = (xml, cbdata) => {
                 link: i.link._text,
                 image: i.image._text,
                 content: clean(i.content._cdata),
-                pubDate: `${itemDate.getDay()} ${itemDate.toLocaleString('default', { month: 'short' })} ${itemDate.getFullYear()}`,
-                pubTime: Number(itemDate.getHours()) > 12
-                    ? `${itemDate.getHours() % 12}:${('0' + itemDate.getMinutes()).slice(-2)} PM`
-                    : `${itemDate.getHours()}:${('0' + itemDate.getMinutes()).slice(-2)} AM`
+                pubDate: itemDate.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+                pubTime: itemDate.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
             }
             return newItem
 
@@ -50,10 +48,8 @@ const CNS = (xml, cbdata) => {
                 link: i.link._text,
                 image: i.guid._text,
                 content: clean(i.description._text),
-                pubDate: `${itemDate.getDay()} ${itemDate.toLocaleString('default', { month: 'short' })} ${itemDate.getFullYear()}`,
-                pubTime: Number(itemDate.getHours()) > 12
-                    ? `${itemDate.getHours() % 12}:${('0' + itemDate.getMinutes()).slice(-2)} PM`
-                    : `${itemDate.getHours()}:${('0' + itemDate.getMinutes()).slice(-2)} AM`
+                pubDate: itemDate.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+                pubTime: itemDate.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
             }
             return newItem
 
@@ -88,10 +84,8 @@ const MRCTV = (xml, cbdata) => {
                 link: i.link._text,
                 image: i.image._text,
                 content: clean(i.content._cdata),
-                pubDate: `${itemDate.getDay()} ${itemDate.toLocaleString('default', { month: 'short' })} ${itemDate.getFullYear()}`,
-                pubTime: Number(itemDate.getHours()) > 12
-                    ? `${itemDate.getHours() % 12}:${('0' + itemDate.getMinutes()).slice(-2)} PM`
-                    : `${itemDate.getHours()}:${('0' + itemDate.getMinutes()).slice(-2)} AM`
+                pubDate: itemDate.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+                pubTime: itemDate.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
             }
             return newItem
 
