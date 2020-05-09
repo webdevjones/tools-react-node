@@ -4,13 +4,11 @@ const convert = require('xml-js')
 const clean = require('./clean_text')
 
 const NB = async url => {
-    console.log(url)
     let urlMatch = url.match(/newsbusters\.org\/(.*)$/)
     let urlSearch = urlMatch[1]
     const xml = await axios.get('https://www.newsbusters.org/nbdailybackup/feed')
     const converted = convert.xml2js(xml.data, { compact: true, spaces: 4 })
     const elements = converted.rss.channel.item
-    // console.log(elements)
     let findItem = elements
         .filter(elem => elem.link._text.includes(urlSearch))
         .map(i => {

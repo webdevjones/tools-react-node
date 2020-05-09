@@ -9,7 +9,6 @@ customRouter.get('/:url', async (req, res) => {
     const url = req.params.url
     if (url.includes('newsbusters.org')) {
         const item = await customItem.NB(url)
-        console.log(item)
         item ? res.json(item) : res.status(400).end()
     }
     else {
