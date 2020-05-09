@@ -29,12 +29,16 @@ const section_route_worker = async (feed, host, template) => {
         ret = parseFeed.MRCTV(elements, pages)
 
     }
-    const data = await get_template(template)
+
     const templates = {
-        baseHTML: data
+        baseHTML: await get_template(template),
+        internalAd: await get_template('Internal_ad.html'),
+        adSpacer: await get_template('Ad_spacer.html'),
+        featured: await get_template('Featured.html'),
+        snapshotImg: await get_template('Snapshot_with_image.html'),
+        snapshot: await get_template('Snapshot.html'),
     }
     ret.templates = templates
-    console.log(ret)
     return ret
 }
 
