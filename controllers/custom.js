@@ -8,11 +8,12 @@ customRouter.get('/', async (req, res) => {
 customRouter.get('/:url', async (req, res) => {
     const url = req.params.url
     if (url.includes('newsbusters.org')) {
-        customItem.NB(url)
-        res.send('<h3>nb</h3>')
+        const item = await customItem.NB(url)
+        console.log(item)
+        item ? res.json(item) : res.status(400).end()
     }
     else {
-        res.status(404).end()
+        res.status(400).end()
     }
 })
 
