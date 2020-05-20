@@ -109,7 +109,7 @@ const MRCTV = (xml, cbdata) => {
             timeArr[1] = ('0' + timeArr[1]).slice(-2)
             const time = timeArr[0] + ':' + timeArr[1] + ' ' + am
             const newItem = {
-                title: clean(i.title._cdata),
+                title: clean(i.title._cdata, true),
                 author: i.author._text,
                 link: i.link._text,
                 image: i.image._text,
