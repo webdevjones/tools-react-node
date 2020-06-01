@@ -4,25 +4,17 @@ const NB = (xml, cbdata) => {
     let topItems = []
     let items = xml
         .map(i => {
-            const itemDate = new Date(Date.parse(i.pubDate._text))
-            const timeArr = i.pubDate._text
-                .split(' ')
-                .slice(-2, -1)[0]
-                .split(':')
-                .map(p => Number(p))
-            let am = timeArr[0] >= 12 ? 'PM' : 'AM'
-            timeArr[0] = timeArr[0] > 12 ? timeArr[0] - 12 : timeArr[0]
-            timeArr[0] = timeArr[0] === 0 ? 12 : timeArr[0]
-            timeArr[1] = ('0' + timeArr[1]).slice(-2)
-            const time = timeArr[0] + ':' + timeArr[1] + ' ' + am
+            const timeArr = i.pubDate._text.split(' ')
+            const date = timeArr.slice(0, 3).join(' ')
+            const time = timeArr.slice(-2).join(' ')
 
             const newItem = {
                 title: i.title._text,
-                author: i.author._text,
+                author: i['dc:creator']._text,
                 link: i.link._text,
-                image: i.image._text,
-                content: clean(i.content._cdata),
-                pubDate: itemDate.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
+                image: i.guid._text,
+                content: clean(i.description._text),
+                pubDate: date,
                 pubTime: time
             }
             return newItem
@@ -57,7 +49,7 @@ const CNS = (xml, cbdata) => {
                 .split(' ')
                 .slice(-1)[0]
                 .split(':')
-                .slice(0,2)
+                .slice(0, 2)
                 .join(':') + ' ' + i.pubDate._text.slice(-2)
 
 

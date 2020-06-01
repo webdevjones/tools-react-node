@@ -9,7 +9,7 @@ sectionRouter.get('/', async (req, res) => {
 
 sectionRouter.get('/nbdaily', async (req, res) => {
     res.json(await section_route_worker(
-        'https://www.newsbusters.org/cyberalert/feed',
+        'https://www.newsbusters.org/feed/newsletter/nbdaily',
         'newsbusters.org',
         'NB_Daily_Complete.html'
     ))
@@ -18,7 +18,7 @@ sectionRouter.get('/nbdaily', async (req, res) => {
 sectionRouter.get('/fsa', async (req, res) => {
 
     res.json(await section_route_worker(
-        'https://www.newsbusters.org/division/fsa/feed',
+        'https://www.newsbusters.org/feed/newsletter/fsa',
         'newsbusters.org',
         'FSA_Complete.html'
     ))
@@ -26,7 +26,7 @@ sectionRouter.get('/fsa', async (req, res) => {
 
 sectionRouter.get('/culture', async (req, res) => {
     res.json(await section_route_worker(
-        'https://www.newsbusters.org/division/culture/feed',
+        'https://www.newsbusters.org/feed/newsletter/culture',
         'newsbusters.org',
         'Culture_Complete.html'
     ))
@@ -34,7 +34,7 @@ sectionRouter.get('/culture', async (req, res) => {
 
 sectionRouter.get('/latino', async (req, res) => {
     res.json(await section_route_worker(
-        'https://www.newsbusters.org/division/latino/feed',
+        'https://www.newsbusters.org/feed/newsletter/latino',
         'newsbusters.org',
         'Latino_Complete.html'
     ))

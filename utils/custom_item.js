@@ -6,21 +6,26 @@ const clean = require('./clean_text')
 const NB = async url => {
     let urlMatch = url.match(/newsbusters\.org\/(.*)$/)
     let urlSearch = urlMatch[1]
-    const xml = await axios.get('https://www.newsbusters.org/nbdailybackup/feed')
+    const xml = await axios.get('https://www.newsbusters.org/feed/newsletter/nbdaily/backup')
     const converted = convert.xml2js(xml.data, { compact: true, spaces: 4 })
     const elements = converted.rss.channel.item
+    console.log(elements)
+    console.log(urlSearch)
     let findItem = elements
         .filter(elem => elem.link._text.includes(urlSearch))
         .map(i => {
-            const itemDate = new Date(Date.parse(i.pubDate._text))
+            const timeArr = i.pubDate._text.split(' ')
+            const date = timeArr.slice(0, 3).join(' ')
+            const time = timeArr.slice(-2).join(' ')
+
             const newItem = {
                 title: i.title._text,
-                author: i.author._text,
+                author: i['dc:creator']._text,
                 link: i.link._text,
-                image: i.image._text,
-                content: clean(i.content._cdata),
-                pubDate: itemDate.toLocaleString('en-US', { day: '2-digit', month: 'short', year: 'numeric' }),
-                pubTime: itemDate.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+                image: i.guid._text,
+                content: clean(i.description._text),
+                pubDate: date,
+                pubTime: time
             }
             return newItem
 
