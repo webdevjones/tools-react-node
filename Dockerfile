@@ -1,18 +1,16 @@
-# Use a lighter version of Node as a parent image
-FROM node:14
-# Set the working directory to /api
-WORKDIR /api
-# copy package.json into the container at /api
-COPY package*.json /api/
-# install dependencies
-RUN npm install
-# Copy the current directory contents into the container at /api
-COPY . /api/
+FROM node:14-alpine
+RUN mkdir -p /server/node_modules && chown -R node:node /server
+WORKDIR /server
 
-# Make port 80 available to the world outside this container
+COPY package*.json ./
+
+USER node
+
+RUN npm install
+
+COPY --chown=node:node . .
+
 EXPOSE 3001
 
-# Run the app when the container launches
+CMD ["npm", "run", "start"]
 
-CMD ["npm", "start"]
-# CMD ["ls"]
