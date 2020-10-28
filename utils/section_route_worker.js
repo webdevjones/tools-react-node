@@ -8,6 +8,7 @@ const get_template = require('../utils/get_template')
 const limit = 25
 const section_route_worker = async (feed, host, template) => {
     const xml = await axios.get(feed)
+
     const resdata = await axios.get('https://api.chartbeat.com/live/toppages/v3/', {
         params: {
             apikey: config.CBAPI_KEY,

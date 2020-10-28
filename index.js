@@ -34,7 +34,7 @@ app.use('/api/custom', customRouter)
 app.use(unknownEndpoint)
 
 const errorHandler = (error, request, response, next) => {
-    console.error(error.message)
+    console.error('Error-', error.message)
 
     next(error)
 }
