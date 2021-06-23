@@ -17,281 +17,274 @@
 
 
 
-    <style type="text/css">
-        html {
-            overflow-y: scroll !important;
-        }
+<style type="text/css">
+    html {
+        overflow-y: scroll !important;
+    }
 
-        body {
-            margin: 0 !important;
-            padding: 0;
-            background-color: #fff
-        }
+    body {
+        margin: 0 !important;
+        padding: 0;
+        background-color: #fff
+    }
 
-        table {
-            border-spacing: 0;
-            font-family: Verdana, Geneva, sans-serif;
-            color: #333e48
-        }
+    table {
+        border-spacing: 0;
+        font-family: Verdana, Geneva, sans-serif;
+        color: #333e48
+    }
 
-        .title {
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-            color: #333e48;
-            margin-top: 0
-        }
+    .title {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+        color: #333e48;
+        margin-top: 0
+    }
 
-        td {
-            padding: 0
-        }
+    td {
+        padding: 0
+    }
 
-        img {
-            border: 0
-        }
+    img {
+        border: 0
+    }
 
-        div[style*="margin: 16px 0"] {
-            margin: 0 !important
-        }
+    div[style*="margin: 16px 0"] {
+        margin: 0 !important
+    }
 
-        .wrapper {
-            width: 100%;
-            table-layout: fixed;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%
-        }
+    .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%
+    }
 
-        .webkit {
-            max-width: 600px;
-            margin: 0 auto
-        }
+    .webkit {
+        max-width: 600px;
+        margin: 0 auto
+    }
 
-        .outer {
-            Margin: 0 auto;
-            width: 100%;
-            max-width: 600px
-        }
+    .outer {
+        Margin: 0 auto;
+        width: 100%;
+        max-width: 600px
+    }
 
-        .full-width-image img {
-            width: 100%;
-            max-width: 600px;
-            height: auto
-        }
+    .full-width-image img {
+        width: 100%;
+        max-width: 600px;
+        height: auto
+    }
 
-        .inner {
-            padding: 10px
-        }
+    .inner {
+        padding: 10px
+    }
 
-        p {
-            Margin: 0
-        }
+    p {
+        Margin: 0
+    }
 
-        a {
-            color: #ee6a56;
-            text-decoration: underline
-        }
+    a {
+        color: #ee6a56;
+        text-decoration: underline
+    }
 
-        .h1 {
-            font-size: 21px;
-            font-weight: 700;
-            Margin-bottom: 18px
-        }
+    .h1 {
+        font-size: 21px;
+        font-weight: 700;
+        Margin-bottom: 18px
+    }
 
-        .h2 {
-            font-size: 18px;
-            font-weight: 700;
-            Margin-bottom: 12px
-        }
+    .h2 {
+        font-size: 18px;
+        font-weight: 700;
+        Margin-bottom: 12px
+    }
 
-        h2.title {
-            color: #333e48
-        }
+    .logo-header {
+        padding: 24px 10px
+    }
 
-        .logo-header {
-            padding: 24px 10px
-        }
+    .header-image {
+        width: 100%;
+        max-width: 405px;
+        height: auto
+    }
 
-        .header-image {
-            width: 100%;
-            max-width: 340px;
-            height: auto
-        }
+    .one-column,
+    .two-column {
+        margin-bottom: 10px
+    }
 
-        .one-column,
-        .two-column {
-            margin-bottom: 10px
-        }
+    .article h2,
+    .soc_med h2 {
+        margin-top: 0
+    }
 
-        .article h2,
-        .article h3,
-        .soc_med h3 {
-            margin-top: 0
-        }
+    .soc_med h2,
+    .soc_med p {
+        text-align: center
+    }
 
-        .soc_med h3,
-        .soc_med p {
-            text-align: center
-        }
+    .icon_tbl {
+        width: 100%;
+        padding: 10px
+    }
 
-        .icon_tbl {
-            width: 100%;
-            padding: 10px
-        }
+    .soc_med_img {
+        width: 52px !important;
+        padding: 5px
+    }
 
-        .soc_med_img {
-            width: 52px !important;
-            padding: 5px
-        }
+    .readMore-btn {
+        background-color: #002f87;
+        width: 140px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 20px
+    }
 
-        .readMore-btn {
-            background-color: #002f87;
-            width: 180px;
-            padding: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            margin-top: 20px
-        }
+    .readMore-btn a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #fff !important
+    }
 
-        .readMore-btn a {
-            text-decoration: none;
-            font-weight: 700;
-            color: #fff !important
-        }
+    .authorDate {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+        font-style: italic;
+        color: #333e48;
+        padding-bottom: 20px
+    }
 
-        .authorDate {
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
-            font-style: italic;
-            color: #333e48;
-            padding-bottom: 20px
-        }
+    .bigStory {
+        padding-top: 15px;
+        font-size: 21px;
+        font-weight: 700
+    }
 
-        .green {
-            color: #b3272d
-        }
+    .snapShots {
+        padding-top: 20px;
+        font-size: 21px;
+        font-weight: 700
+    }
 
-        .bigStory {
-            padding-top: 15px;
-            font-size: 21px;
-            font-weight: 700
-        }
+    .authorDate a {
+        color: #002f87;
+        text-decoration: none
+    }
 
-        .snapShots {
-            padding-top: 20px;
-            font-size: 21px;
-            font-weight: 700
-        }
+    .featuredImage {
+        padding-bottom: 15px
+    }
 
-        .authorDate a {
-            color: #002f87;
-            text-decoration: none;
-            font-weight: 700
-        }
+    .ad_section .inner {
+        padding: 15px
+    }
 
-        .featuredImage {
-            padding-bottom: 15px
-        }
+    .don-btn {
+        background: #009bde;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: center
+    }
 
-        .ad_section .inner {
-            padding: 15px
-        }
+    .don-btn a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700
+    }
 
-        .don-btn {
-            background: #009bde;
-            padding: 10px;
-            margin: 10px 0;
-            text-align: center
-        }
+    .footer {
+        color: #333e48;
+        margin: 20px;
+        text-align: center !important
+    }
 
-        .don-btn a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700
-        }
+    .footer p {
+        font-size: 14px !important;
+        font-weight: 400;
+        line-height: 16px !important;
+        padding-bottom: 0 !important
+    }
 
-        .footer {
-            color: #333e48;
-            margin: 20px;
-            text-align: center !important
-        }
+    .footer img {
+        margin-bottom: 0;
+        padding: 15px 0
+    }
 
-        .footer p {
-            font-size: 14px !important;
-            font-weight: 400;
-            line-height: 16px !important;
-            padding-bottom: 0 !important
-        }
+    .footer a {
+        color: #333e48 !important;
+        text-decoration: none !important
+    }
 
-        .footer img {
-            margin-bottom: 0;
-            padding: 15px 0
-        }
+    .footer .about {
+        font-size: 12px !important;
+        font-weight: 400;
+        line-height: 16px !important;
+        color: #333e48;
+        margin: 20px;
+        text-align: center
+    }
 
-        .footer a {
-            color: #333e48 !important;
-            text-decoration: none !important
-        }
+    .one-column .contents {
+        text-align: left
+    }
 
-        .footer .about {
-            font-size: 12px !important;
-            font-weight: 400;
-            line-height: 16px !important;
-            color: #333e48;
-            margin: 20px;
-            text-align: center
-        }
+    .one-column p {
+        font-size: 16px;
+        line-height: 25px
+    }
 
-        .one-column .contents {
-            text-align: left
-        }
+    .two-column {
+        text-align: center;
+        font-size: 0
+    }
 
-        .one-column p {
-            font-size: 16px;
-            line-height: 25px
-        }
+    .two-column .column {
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+        vertical-align: top
+    }
 
-        .two-column {
-            text-align: center;
-            font-size: 0;
-            padding-bottom: 15px
-        }
+    .contents {
+        width: 100%
+    }
 
+    .two-column .contents {
+        font-size: 16px;
+        line-height: 25px;
+        text-align: left
+    }
+
+    .two-column img {
+        width: 100%;
+        max-width: 280px;
+        height: auto
+    }
+
+    .two-column .text {
+        padding-top: 10px
+    }
+
+    @media screen and (max-width:400px) {
         .two-column .column {
-            width: 100%;
-            max-width: 300px;
-            display: inline-block;
-            vertical-align: top
-        }
-
-        .contents {
-            width: 100%
-        }
-
-        .two-column .contents {
-            font-size: 16px;
-            line-height: 25px;
-            text-align: left
+            max-width: 100% !important
         }
 
         .two-column img {
-            width: 100%;
-            max-width: 280px;
-            height: auto
+            max-width: 100% !important
         }
+    }
 
-        @media screen and (max-width:400px) {
-            .two-column .column {
-                max-width: 100% !important
-            }
-
-            .two-column img {
-                max-width: 100% !important
-            }
+    @media screen and (min-width:401px) and (max-width:620px) {
+        .two-column .column {
+            max-width: 50% !important
         }
-
-        @media screen and (min-width:401px) and (max-width:620px) {
-            .two-column .column {
-                max-width: 50% !important
-            }
-        }
-    </style>
+    }
+</style>
 
 
 
@@ -321,8 +314,8 @@
                             <a href="https://sli.newsbusters.org/click?s=802111&li={LIST_ID}&e=%%email%%&p=%%emailid%%&stpe=default"
                                 rel="nofollow">
                                 <img src="https://sli.newsbusters.org/imp?s=802111&li={LIST_ID}&e=%%email%%&p=%%emailid%%&stpe=default"
-                                    border="0" width="{INSERT TEMPLATE MAX WIDTH HERE AS INTEGER}"
-                                    style="width: 100%; max-width: {INSERT TEMPLATE MAX WIDTH HERE AS INTEGER}px !important;" />
+                                    border="0" width="600"
+                                    style="width: 100%; max-width: 600px !important;" />
                             </a>
                         </td>
                     </tr>
@@ -416,8 +409,8 @@
                                         <a href="https://sli.newsbusters.org/click?s=802107&li={LIST_ID}&e=%%email%%&p=%%emailid%%&stpe=default"
                                             rel="nofollow">
                                             <img src="https://sli.newsbusters.org/imp?s=802107&li={LIST_ID}&e=%%email%%&p=%%emailid%%&stpe=default"
-                                                border="0" width="{INSERT TEMPLATE MAX WIDTH HERE AS INTEGER}"
-                                                style="width: 100%; max-width: {INSERT TEMPLATE MAX WIDTH HERE AS INTEGER}px !important;" />
+                                                border="0" width="600"
+                                                style="width: 100%; max-width: 600px !important;" />
                                         </a>
                                     </td>
                                 </tr>
@@ -476,110 +469,126 @@
 
                 <tr class="soc_med">
                     <td class="two-column"
-                        style="padding-top:0;padding-right:0;padding-left:0;margin-bottom:10px;text-align:center;font-size:0;padding-bottom:15px;">
+                        style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-bottom:10px;text-align:center;font-size:0;">
                         <!--[if (gte mso 9)|(IE)]>
-        <table width="100%" style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;" >
-        <tr>
-        <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
-        <![endif]-->
-                        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-                            <table width="100%"
-                                style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;">
-                                <tr>
-                                    <td class="inner"
-                                        style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
-                                        <table class="contents"
-                                            style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;font-size:16px;line-height:25px;text-align:left;">
-                                            <tr>
-                                                <td class="text"
-                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                    <h3 style="margin-top:0;text-align:center;">Follow Us:</h3>
-                                                    <p style="Margin:0;text-align:center;">The mission of the Media
-                                                        Research Center is to create a media culture in America where
-                                                        truth and liberty flourish.</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                    <table class="icon_tbl"
-                                                        style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
-                                                        <tbody>
-                                                            <tr>
-
-                                                                <td
-                                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                                    <a href="https://www.facebook.com/mrcbusiness/"
-                                                                        target="_blank"
-                                                                        style="color:#ee6a56;text-decoration:underline;">
-                                                                        <img class="soc_med_img" align="right"
-                                                                            src="https://cdn.mrc.org/U/OP/EMT/ASSETS/BlueFacebookIcon.png"
-                                                                            width="52" alt="MRC Business | Facebook"
-                                                                            style="border-width:0;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;width:52px!important;max-width:280px;height:auto;" />
-                                                                    </a>
-                                                                </td>
-                                                                <td
-                                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                                    <a href="https://twitter.com/bizandmedia?lang=en"
-                                                                        target="_blank"
-                                                                        style="color:#ee6a56;text-decoration:underline;">
-                                                                        <img class="soc_med_img" align="left"
-                                                                            src="https://cdn.mrc.org/U/OP/EMT/ASSETS/BlueTwitterIcon.png"
-                                                                            width="52" alt="MRC Business | Twitter"
-                                                                            style="border-width:0;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;width:52px!important;max-width:280px;height:auto;" />
-                                                                    </a>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--[if (gte mso 9)|(IE)]>
-        </td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
-        <![endif]-->
-                        <div class="column" style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
-                            <table width="100%"
-                                style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;">
-                                <tr>
-                                    <td class="inner"
-                                        style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
-                                        <table class="contents"
-                                            style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;font-size:16px;line-height:25px;text-align:left;">
-                                            <tr>
-                                                <td class="text"
-                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                    <h3 style="margin-top:0;text-align:center;">Help Us Combat
-                                                        the<br>Media's Leftist Agenda:</h3>
-                                                    <p style="Margin:0;text-align:center;">That's why the Media Research
-                                                        Center exists. And that's why we need your support!</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
-                                                    <div class="don-btn" bgcolor="D8262E"
-                                                        style="background-color:#009bde;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;text-align:center;">
-                                                        <a href="https://www.newsbusters.org/donate/mrc-Latino?utm_source=dct&utm_medium=email&utm_campaign=latino_nl&utm_content=soc_med"
-                                                            target="_blank"
-                                                            style="color:#fff;text-decoration:none;font-weight:700;">Donate</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--[if (gte mso 9)|(IE)]>
-        </td>
-        </tr>
-        </table>
+    <table width="100%" style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;" >
+    <tr>
+    <td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
     <![endif]-->
+                        <div class="column"
+                            style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                            <table style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;"
+                                width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="inner"
+                                            style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
+                                            <table class="contents"
+                                                style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;font-size:16px;line-height:25px;text-align:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text"
+                                                            style="padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;">
+                                                            <h2 style="margin-top:0;text-align:center;">Follow Us:
+                                                            </h2>
+
+                                                            <p style="Margin:0;text-align:center;">The mission of
+                                                                the Media Research Center is to create a media
+                                                                culture in America where truth and liberty flourish.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                                            <table class="icon_tbl"
+                                                                style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td
+                                                                            style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                                                            <a href="https://www.facebook.com/mrclatino/"
+                                                                                style="color:#ee6a56;text-decoration:underline;"
+                                                                                target="_blank"><img align="right"
+                                                                                    alt="NewsBusters | Facebook"
+                                                                                    class="soc_med_img"
+                                                                                    src="https://cdn.mrc.org/U/OP/EMT/ASSETS/BlueFacebookIcon.png"
+                                                                                    style="border-width:0;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;width:52px!important;max-width:280px;height:auto;"
+                                                                                    width="52" /> </a>
+                                                                        </td>
+                                                                        <td
+                                                                            style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                                                            <a href="https://twitter.com/mrclatino"
+                                                                                style="color:#ee6a56;text-decoration:underline;"
+                                                                                target="_blank"><img align="left"
+                                                                                    alt="NewsBusters | Twitter"
+                                                                                    class="soc_med_img"
+                                                                                    src="https://cdn.mrc.org/U/OP/EMT/ASSETS/BlueTwitterIcon.png"
+                                                                                    style="border-width:0;padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;width:52px!important;max-width:280px;height:auto;"
+                                                                                    width="52" /> </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+    </td><td width="50%" valign="top" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+    <![endif]-->
+
+                        <div class="column"
+                            style="width:100%;max-width:300px;display:inline-block;vertical-align:top;">
+                            <table style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;"
+                                width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="inner"
+                                            style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;">
+                                            <table class="contents"
+                                                style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;width:100%;font-size:16px;line-height:25px;text-align:left;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text"
+                                                            style="padding-bottom:0;padding-right:0;padding-left:0;padding-top:10px;">
+                                                            <h2 style="margin-top:0;text-align:center;">Help Us
+                                                                Combat the<br>Media's Leftist Agenda:</h2>
+
+                                                            <p style="Margin:0;text-align:center;">That&#39;s why
+                                                                the Media Research Center exists. And that&#39;s why
+                                                                we need your support!</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td
+                                                            style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;">
+                                                            <div bgcolor="#009BDE" class="don-btn"
+                                                                style="background-color:#009bde;background-image:none;background-repeat:repeat;background-position:top left;background-attachment:scroll;padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;margin-top:10px;margin-bottom:10px;margin-right:0;margin-left:0;text-align:center;">
+                                                                <a href="https://www.newsbusters.org/donate?utm_source=dct&amp;utm_medium=email&amp;utm_campaign=nb_daily&amp;utm_content=soc_med"
+                                                                    style="color:#fff;text-decoration:none;font-weight:700;"
+                                                                    target="_blank">Donate</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+<![endif]-->
+
                         <div class="spacer"><span>&nbsp;</span></div>
                     </td>
                 </tr>
@@ -591,65 +600,65 @@
                 <tr>
                     <td class="one-column"
                         style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-bottom:10px;">
-                        <table width="100%"
-                            style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;">
-                            <tr>
-                                <td class="inner contents footer"
-                                    style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:#333e48;margin-top:20px;margin-bottom:20px;margin-right:20px;margin-left:20px;width:100%;text-align:center!important;">
-                                    <img align="center" alt="A Product of MRC"
-                                        src="https://cdn.mrc.org/U/OP/EMT/LOGO/AProductOf_2020.png"
-                                        style="border-width:0;margin-bottom:0;padding-top:15px;padding-bottom:15px;padding-right:0;padding-left:0;"
-                                        width="275" />
-                                    <p
-                                        style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
-                                        <span style="color:#333E48;">Media Research Center</span> <a href="#"
-                                            style="color:#333e48!important;text-decoration:none!important;">|</a> <a
-                                            href="http://www.mrc.org/about" target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">1900 Campus
-                                            Commons Drive, Suite 600</a> <br /> <a href="http://www.mrc.org/about"
-                                            target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Reston, VA
-                                            20191</a>
-                                    </p>
-                                    <p
-                                        style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
-                                        <a href="https://www.newsbusters.org/donate/mrc-Latino?utm_source=dct&utm_medium=email&utm_campaign=latino_nl&utm_content=footer"
-                                            target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Donate</a>
-                                        <a href="#"
-                                            style="color:#333e48!important;text-decoration:none!important;">|</a> <a
-                                            href="%%unsubscribe%%" target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Unsubscribe</a>
-                                        <a href="#"
-                                            style="color:#333e48!important;text-decoration:none!important;">|</a> <a
-                                            href="%%email_preference_center%%" target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Update
-                                            Preferences</a>
-                                    </p>
+                        <table style="border-spacing:0;font-family:Verdana,Geneva,sans-serif;color:#333e48;"
+                            width="100%">
+                            <tbody>
+                                <tr>
+                                    <td class="inner contents footer"
+                                        style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;color:#333e48;margin-top:20px;margin-bottom:20px;margin-right:20px;margin-left:20px;width:100%;text-align:center!important;">
+                                        <img align="center" alt="A Product of MRC"
+                                            src="https://cdn.mrc.org/U/OP/EMT/LOGO/AProductOf_2020.png"
+                                            style="border-width:0;margin-bottom:0;padding-top:15px;padding-bottom:15px;padding-right:0;padding-left:0;"
+                                            width="275" />
+                                        <p
+                                            style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
+                                            <span style="color:#333E48;">Media Research Center</span> <a href="#"
+                                                style="color:#333e48!important;text-decoration:none!important;">|</a>
+                                            <a href="http://www.mrc.org/about"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">1900 Campus Commons Drive, Suite 600</a><br />
+                                            <a href="http://www.mrc.org/about"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Reston, VA 20191</a>
+                                        </p>
 
-                                    <p class="about"
-                                        style="Margin:0;padding-bottom:0!important;font-size:12px!important;font-weight:400;line-height:16px!important;color:#333e48;margin-top:20px;margin-bottom:20px;margin-right:20px;margin-left:20px;text-align:center;">
-                                        The mission of the Media Research Center is to create a media culture in America
-                                        where truth and liberty flourish.
-                                        The MRC is a research and education organization operating under Section
-                                        501(c)(3) of the Internal Revenue Code, and contributions to the MRC are
-                                        tax-deductible.</p>
+                                        <p
+                                            style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
+                                            <a href="https://www.newsbusters.org/donate?utm_source=dct&amp;utm_medium=email&amp;utm_campaign=nb_daily&amp;utm_content=footer"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Donate</a> <a href="#"
+                                                style="color:#333e48!important;text-decoration:none!important;">|</a>
+                                            <a href="%%unsubscribe%%"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Unsubscribe</a> <a href="#"
+                                                style="color:#333e48!important;text-decoration:none!important;">|</a>
+                                            <a href="%%email_preference_center%%"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Update Preferences</a>
+                                        </p>
 
-                                    <p
-                                        style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
-                                        <a href="http://www.mrc.org/privacy-policy" target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Privacy
-                                            Policy</a> | <a href="http://www.mrc.org/terms-of-use-agreement"
-                                            target="_blank"
-                                            style="color:#333e48!important;text-decoration:none!important;">Terms of Use
-                                            Agreement</a>
-                                    </p>
-                                </td>
-                            </tr>
+                                        <p class="about"
+                                            style="Margin:0;padding-bottom:0!important;font-size:12px!important;font-weight:400;line-height:16px!important;color:#333e48;margin-top:20px;margin-bottom:20px;margin-right:20px;margin-left:20px;text-align:center;">
+                                            The mission of the Media Research Center is to create a media culture in
+                                            America where truth and liberty flourish. The MRC is a research and
+                                            education organization operating under Section 501(c)(3) of the Internal
+                                            Revenue Code, and contributions to the MRC are tax-deductible.</p>
+
+                                        <p
+                                            style="Margin:0;font-weight:400;padding-bottom:0!important;font-size:14px!important;line-height:16px!important;">
+                                            <a href="http://www.mrc.org/privacy-policy"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Privacy Policy</a> | <a
+                                                href="http://www.mrc.org/terms-of-use-agreement"
+                                                style="color:#333e48!important;text-decoration:none!important;"
+                                                target="_blank">Terms of Use Agreement</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </td>
                 </tr>
-
                 <!-- FOOTER SECTION -->
 
 
