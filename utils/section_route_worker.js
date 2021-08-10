@@ -6,7 +6,7 @@ const get_template = require('../utils/get_template')
 
 
 const limit = 25
-const section_route_worker = async (feed, host, template, impact) => {
+const section_route_worker = async (feed, host, template, impact, podcast) => {
     const xml = await axios.get(feed)
 
     const resdata = await axios.get('https://api.chartbeat.com/live/toppages/v3/', {
@@ -39,6 +39,7 @@ const section_route_worker = async (feed, host, template, impact) => {
         featured: await get_template('Featured.html'),
         snapshotImg: await get_template('Snapshot_with_image.html'),
         snapshot: await get_template('Snapshot.html'),
+        podcast: podcast ? await get_template(`podcast/${podcast}`) : await get_template('podcast/Null_Podcast.html')
     }
     ret.templates = templates
     return ret

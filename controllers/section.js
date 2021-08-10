@@ -2,7 +2,7 @@ const sectionRouter = require('express').Router()
 
 const section_route_worker = require('../utils/section_route_worker')
 
- 
+
 sectionRouter.get('/', async (req, res) => {
     res.send('<h1>Herro world</h1>')
 })
@@ -12,7 +12,8 @@ sectionRouter.get('/nbdaily', async (req, res) => {
         'https://www.newsbusters.org/feed/newsletter/nbdaily',
         'newsbusters.org',
         'NB_Daily_Complete.html',
-        'NB_Daily_Impact.html'
+        'NB_Daily_Impact.html',
+        'NB_Podcast.html'
     ))
 })
 
