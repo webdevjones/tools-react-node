@@ -11,6 +11,14 @@ customRouter.get('/:url', async (req, res) => {
         const item = await customItem.NB(url)
         item ? res.json(item) : res.status(400).end()
     }
+    else if (url.includes('cnsnews.com')) {
+        const item = await customItem.CNS(url)
+        item ? res.json(item) : res.status(400).end()
+    }
+    else if (url.includes('mrctv.org')) {
+        const item = await customItem.MRCTV(url)
+        item ? res.json(item) : res.status(400).end()
+    }
     else {
         res.status(400).end()
     }
