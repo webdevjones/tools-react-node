@@ -60,7 +60,8 @@ sectionRouter.get('/mrctv', async (req, res) => {
         'https://www.mrctv.org/newsletters/feeds/blog',
         'mrctv.org',
         'MRCTV_Complete.html',
-        'MRCTV_Impact.html'
+        'MRCTV_Impact.html',
+        'MRCTV_Podcast.html'
     ))
 })
 
